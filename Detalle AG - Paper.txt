@@ -1,0 +1,44 @@
+Detalle AG - Paper
+
+Capas convolucionales:
+ - Se optimizan con AG
+ - Same-padding
+ - Dropout 0.1
+ - Cada 2 -> Batch norm + Max pooling + Dropout 0.1
+
+Capa densa:
+ - Droput 0.5
+
+Notación
+conv_parameters: Todos los parámetros fijos
+
+
+Representación de cromosoma:
+- Depth
+- num_of_filters
+- kernel_size
+
+... Lista de N capas -> tiene largo 2n+1
+
+CIFAR10:
+
+- depth in [2,7]
+
+CALTECH256
+
+- depth in [6, 12]
+
+-----
+- num_of_filters in [4, 128]
+- kernel_size in [2,9]
+
+
+Mutación:
+- Profundidad: Si es menor, se corta, si es mayor se agregan valores random de (L,k)
+- L o k; Valor random en L o en k
+- 50% de prob para cada metodo
+
+Crossover:
+- Secuencial: Pivote, swap de lado derecho.
+- Binraio: Lista binaria -> 1's se escogen aleatorios en L o k.
+- Secuencial con prob g/G y Binario con prob: 1-g/G
