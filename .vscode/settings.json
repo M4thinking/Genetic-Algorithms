@@ -5,4 +5,7 @@
     "conventionalCommits.scopes": [
         "project"
     ],
+    "cSpell.words": [
+        "cromosome"
+    ],
 }
