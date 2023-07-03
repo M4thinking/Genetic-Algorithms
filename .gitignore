@@ -1,3 +1,4 @@
 #ignore data folder in whatever directory you are in:
 */data
+*/models
 ```
